@@ -1,5 +1,15 @@
 ## pytorch-openpose
 
+***
+
+This is a test version about the [project](https://github.com/Hzzone/pytorch-openpose) be forked. In this project, I am trying to speed up the **body recognize algorithm** and make it running both on CPU and GPU.  
+In the baseline test, on my test machine (Intel Core i5-10400F and 1x NVIDIA GeForce 3090Ti), the original project processing 99 frames in 280 secs and this test project processing same 99 frams in 49 secs.  
+You can simply switch algorithm in src/body.py.  
+Although this project is much more faster than original project, it is still much more slower than the original openpose project written by Caffe, so I will still try to optimize it.  
+Author: LuoXishuang
+
+***
+
 pytorch implementation of [openpose](https://github.com/CMU-Perceptual-Computing-Lab/openpose) including **Body and Hand Pose Estimation**, and the pytorch model is directly converted from [openpose](https://github.com/CMU-Perceptual-Computing-Lab/openpose) caffemodel by [caffemodel2pytorch](https://github.com/vadimkantorov/caffemodel2pytorch). You could implement face keypoint detection in the same way if you are interested in. Pay attention to that the face keypoint detector was trained using the procedure described in [Simon et al. 2017] for hands.
 
 openpose detects hand by the result of body pose estimation, please refer to the code of [handDetector.cpp](https://github.com/CMU-Perceptual-Computing-Lab/openpose/blob/master/src/openpose/hand/handDetector.cpp).
